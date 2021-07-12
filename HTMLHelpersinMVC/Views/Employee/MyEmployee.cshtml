@@ -1,0 +1,15 @@
+﻿@model HTMLHelpersinMVC.Models.Employee
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Textbox helper</title>
+</head>
+<body>
+@Html.TextBox("address",null, new {@class="form-control"})
+
+    <!--form 0f- <textarea class ="form-control" value="null" id="Address" name="Address"></textare>-->
+@Html.TextAreaFor(x=>x.Address, new { @class = "form-control" })
+</body>
+</html>

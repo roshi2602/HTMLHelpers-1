@@ -1,0 +1,40 @@
+﻿@model HTMLHelpersinMVC.Models.Employee
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Drop down list</title>
+</head>
+<body>
+    <!--syntax  for dropdown list-->
+    @Html.DropDownList("Employee",
+    ViewBag.Employee as List<SelectListItem>,
+    "select Employee",
+    new { @class = "form-control" }
+
+    )
+
+    <!--
+        ViewBag.Employee as List<SelectListItem>  is a list of values which are going to be
+        displayed in drop down list
+
+        ViewBag is mechanism to get Employee values
+
+         "select Employee" is just a label which is the first item in drop down list
+
+          new { class = "form-control" }  - is just an html attribute to be applied on drop down list
+
+
+        -->
+
+    <!--it is of the html modified version of
+        
+        <select class="form control" id ="Employee" name="Employee">
+        <option value="">select Employee</option>       
+     -->
+
+    <!--drop down list for is a strongly typed extension method .This method is used to select element from property by using lambda expression
+               -->
+    
+</body>
+</html>
